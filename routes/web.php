@@ -3,6 +3,10 @@
 use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
 
+Route::get("/", function () {
+    return view("login");
+});
+
 Route::get('/login', [RouteController::class, 'login'])->name('login');
 Route::get('/register', [RouteController::class, 'register'])->name('register');
 Route::get('/forget-password', [RouteController::class, 'forget_password'])->name('forget.password');
