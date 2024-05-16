@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('template.master')
 
 @section('title', 'SB Admin 2 - Border Utilities')
 

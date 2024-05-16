@@ -2,80 +2,76 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
-
 class RouteController extends Controller
 {
-    public function index(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function index()
     {
-        return view('admin.index');
+        return view('template.index');
     }
 
-    public function not_found(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function not_found()
     {
-        return view('admin.404');
+        return view('template.404');
     }
 
-    public function blank(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function blank()
     {
-        return view('admin.blank');
+        return view('template.blank');
     }
 
-    public function buttons(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function buttons()
     {
-        return view('admin.buttons');
+        return view('template.buttons');
     }
 
-    public function cards(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function cards()
     {
-        return view('admin.cards');
+        return view('template.cards');
     }
 
-    public function charts(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function charts()
     {
-        return view('admin.charts');
+        return view('template.charts');
     }
 
-    public function forget_password(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function forget_password()
     {
-        return view('forget-password');
+        return view('template.forget-password');
     }
 
-    public function login(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function login()
     {
-        return view('login');
+        return view('template.login');
     }
 
-    public function register(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function register()
     {
-        return view('register');
+        return view('template.register');
     }
 
-    public function tables(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function tables()
     {
-        return view('admin.tables');
+        return view('template.tables');
     }
 
-    public function utilities_animation(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function utilities_animation()
     {
-        return view('admin.utilities-animation');
+        return view('template.utilities-animation');
     }
 
-    public function utilities_border(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function utilities_border()
     {
-        return view('admin.utilities-border');
+        return view('template.utilities-border');
     }
 
-    public function utilities_color(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function utilities_color()
     {
-        return view('admin.utilities-color');
+        return view('template.utilities-color');
     }
 
-    public function utilities_other(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function utilities_other()
     {
-        return view('admin.utilities-other');
+        return view('template.utilities-other');
     }
 
 }
