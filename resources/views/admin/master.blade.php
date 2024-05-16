@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">SB ADMIN <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -56,49 +56,24 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Data
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item {{ Request::is('admin/buttons', 'admin/cards') ? 'active' : '' }}">
+            <li class="nav-item {{ Request::is('admin/teacher', 'admin/student') ? 'active' : '' }}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Data Pengguna</span>
                 </a>
-                <div id="collapseTwo" class="collapse {{ Request::is('admin/buttons', 'admin/cards') ? 'show' : '' }}"
+                <div id="collapseTwo" class="collapse {{ Request::is('admin/teacher', 'admin/student') ? 'show' : '' }}"
                     aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item {{ Request::is('admin/buttons') ? 'active' : '' }}"
-                            href="{{ route('admin.buttons') }}">Buttons</a>
-                        <a class="collapse-item {{ Request::is('admin/cards') ? 'active' : '' }}"
-                            href="{{ route('admin.cards') }}">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li
-                class="nav-item {{ Request::is('admin/utilities-color', 'admin/utilities-border', 'admin/utilities-animation', 'admin/utilities-other') ? 'active' : '' }}">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities"
-                    class="collapse {{ Request::is('admin/utilities-color', 'admin/utilities-border', 'admin/utilities-animation', 'admin/utilities-other') ? 'show' : '' }}"
-                    aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item {{ Request::is('admin/utilities-color') ? 'active' : '' }}"
-                            href="{{ route('admin.utilities.color') }}">Colors</a>
-                        <a class="collapse-item {{ Request::is('admin/utilities-border') ? 'active' : '' }}"
-                            href="{{ route('admin.utilities.border') }}">Borders</a>
-                        <a class="collapse-item {{ Request::is('admin/utilities-animation') ? 'active' : '' }}"
-                            href="{{ route('admin.utilities.animation') }}">Animations</a>
-                        <a class="collapse-item {{ Request::is('admin/utilities-other') ? 'active' : '' }}"
-                            href="{{ route('admin.utilities.other') }}">Other</a>
+                        <h6 class="collapse-header">Semua Pengguna</h6>
+                        <a class="collapse-item {{ Request::is('admin/teacher') ? 'active' : '' }}"
+                            href="{{ route('admin.teacher') }}">Guru</a>
+                        <a class="collapse-item {{ Request::is('admin/student') ? 'active' : '' }}"
+                            href="{{ route('admin.student') }}">Siswa</a>
                     </div>
                 </div>
             </li>
@@ -108,45 +83,21 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Admin
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item {{ Request::is('admin/404', 'admin/blank') ? 'active' : '' }}">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse {{ Request::is('admin/404', 'admin/blank') ? 'show' : '' }}"
-                    aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="{{ route('login') }}">Login</a>
-                        <a class="collapse-item" href="{{ route('register') }}">Register</a>
-                        <a class="collapse-item" href="{{ route('forget.password') }}">Forget Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item {{ Request::is('admin/404') ? 'active' : '' }}"
-                            href="{{ route('admin.not.found') }}">404 Page</a>
-                        <a class="collapse-item {{ Request::is('admin/blank') ? 'active' : '' }}"
-                            href="{{ route('admin.blank') }}">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item {{ Request::is('admin/charts') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('admin.charts') }}">
+            <!-- Nav Item - Admin Management -->
+            <li class="nav-item {{ Request::is('admin/manage') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.manage') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Menejemen Admin</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item {{ Request::is('admin/tables') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('admin.tables') }}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+            <!-- Nav Item - User Message -->
+            <li class="nav-item {{ Request::is('admin/message') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.message') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Pesan Pengguna</span></a>
             </li>
 
             <!-- Divider -->
@@ -197,150 +148,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
                         </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to
-                                            download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All
-                                    Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle"
-                                            src="{{ asset('theme') }}/img/undraw_profile_1.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.
-                                        </div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle"
-                                            src="{{ asset('theme') }}/img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?
-                                        </div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle"
-                                            src="{{ asset('theme') }}/img/undraw_profile_3.svg" alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy
-                                            with
-                                            the progress so far, keep up the good work!
-                                        </div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle"
-                                            src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...
-                                        </div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More
-                                    Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
