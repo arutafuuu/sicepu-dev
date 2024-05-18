@@ -34,10 +34,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin') }}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon rotate-n-0">
+                    <i class="fas fa-user"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB ADMIN <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">SICEPU</div>
             </a>
 
             <!-- Divider -->
@@ -87,16 +87,16 @@
             </div>
 
             <!-- Nav Item - Admin Management -->
-            <li class="nav-item {{ Request::is('admin/manage') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('admin.manage') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Menejemen Admin</span></a>
+            <li class="nav-item {{ Request::is('admin/class') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.class') }}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Kelas</span></a>
             </li>
 
             <!-- Nav Item - User Message -->
             <li class="nav-item {{ Request::is('admin/message') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.message') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-comments fa-2x text-gray-300"></i>
                     <span>Pesan Pengguna</span></a>
             </li>
 
@@ -154,7 +154,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Wang Eugeo</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('theme') }}/img/undraw_profile.svg" alt="...">
                             </a>

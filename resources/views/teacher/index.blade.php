@@ -1,4 +1,4 @@
-@extends('template.master')
+@extends('teacher.master')
 
 @section('title', 'SB Admin 2 - Dashboard')
 

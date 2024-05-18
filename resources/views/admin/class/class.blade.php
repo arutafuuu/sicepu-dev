@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'SB Admin 2 - Guru')
+@section('title', 'SB Admin 2 - Kelas')
 
 @section('styles')
     <!-- Custom styles for this page -->
@@ -19,8 +19,8 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <div class="row">
-                    <h4 class="m-1 font-weight-bold text-primary">DATA GURU</h4>
-                    <a class="btn btn-success ml-auto" href="#">Tambah Guru</a>
+                    <h4 class="m-1 font-weight-bold text-primary">DATA KELAS</h4>
+                    <a class="btn btn-success ml-auto" href="#">Tambah Kelas</a>
                 </div>
             </div>
             <div class="card-body">
@@ -28,23 +28,23 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>NIP</th>
-                                <th>Nama</th>
-                                <th>Kelas Perwalian</th>
-                                <th>Mata Pelajaran</th>
+                                <th>Id Kelas</th>
+                                <th>Kelas</th>
+                                <th>Wali Kelas</th>
+                                <th>Ketua Kelas</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>197503211998031005</th>
-                                <th>Budi Santoso</th>
+                                <th>2401</th>
                                 <th>VII A</th>
-                                <th>IPA Terpadu</th>
+                                <th>Budi Santoso</th>
+                                <th>Aldi Firmansyah</th>
                                 <th>
                                     <form action="">
-                                        <a href="{{ route('admin.teacher.detail') }}" class="btn btn-sm btn-primary mb-1">Detail</a>
-                                        <a href="{{ route('admin.teacher.edit') }}" class="btn btn-sm btn-warning mb-1">Edit</a>
+                                        <a href="{{ route('admin.student.detail') }}" class="btn btn-sm btn-primary mb-1">Detail</a>
+                                        <a href="#" class="btn btn-sm btn-warning mb-1">Edit</a>
                                         <button class="btn btn-sm btn-danger mb-1">Hapus</button>
                                     </form>
                                 </th>

@@ -7,7 +7,7 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Message Page</h1>
+        <h1 class="h3 mb-4 text-gray-800">Pesan Pengguna</h1>
 
     </div>
     <!-- /.container-fluid -->
