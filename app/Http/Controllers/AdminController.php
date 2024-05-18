@@ -11,9 +11,9 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function manage()
+    public function class()
     {
-        return view('admin.admin');
+        return view('admin.class.class');
     }
 
     public function message()
@@ -26,8 +26,27 @@ class AdminController extends Controller
         return view('admin.student.student');
     }
 
+    public function detail_student()
+    {
+        return view('admin.student.detail');
+    }
+    public function edit_student()
+    {
+        return view('admin.student.edit');
+    }
+
     public function teacher()
     {
         return view('admin.teacher.teacher');
+    }
+
+    public function detail_teacher()
+    {
+        return view('admin.teacher.detail');
+    }
+
+    public function edit_teacher()
+    {
+        return view('admin.teacher.edit');
     }
 }
