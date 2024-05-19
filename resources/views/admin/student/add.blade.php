@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'Edit Siswa')
+@section('title', 'Tambah Siswa')
 
 @section('style')
 
@@ -11,7 +11,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Data Siswa</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tambah Siswa</h6>
             </div>
             <form action="">
                 <div class="card-body ">
@@ -27,14 +27,14 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="Aldi Firmansyah">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>NIS</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="240001">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -76,35 +76,35 @@
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="+6282345678910">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control" value="aldifirmansyah@example.com">
+                                    <input type="email" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Nama Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="Ridwan">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kontak Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="+6281234567890">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control" value="ridwan@example.com">
+                                    <input type="email" class="form-control">
                                 </td>
                             </tr>
                         </table>

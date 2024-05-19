@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@yield('title')</title>
+    <title>SB Admin 2 - @yield('title')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('theme') }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -89,14 +89,14 @@
             <!-- Nav Item - Admin Management -->
             <li class="nav-item {{ Request::is('admin/class') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.class') }}">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-book"></i>
                     <span>Kelas</span></a>
             </li>
 
             <!-- Nav Item - User Message -->
             <li class="nav-item {{ Request::is('admin/message') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.message') }}">
-                    <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    <i class="fas fa-comments fa-2x"></i>
                     <span>Pesan Pengguna</span></a>
             </li>
 
@@ -125,7 +125,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
+                    {{-- <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -137,7 +137,12 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
+                    <div class="container">
+                        <div class="d-none d-sm-inline-block">
+                            <h4 class="font-weight-bold text-primary">Sistem Informasi Cerdas dan Terpantau</h4>
+                        </div>
+                    </div>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -146,7 +151,8 @@
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
+                                {{-- <i class="fas fa-search fa-fw"></i> --}}
+                                <h4 class="font-weight-bold text-primary mt-2">SICEPU</h4>
                             </a>
                         </li>
 
@@ -156,7 +162,8 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Wang Eugeo</span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{ asset('theme') }}/img/undraw_profile.svg" alt="...">
+                                    {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" alt="..."> --}}
+                                    src="{{ asset('img') }}/blank-profile.webp" alt="...">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

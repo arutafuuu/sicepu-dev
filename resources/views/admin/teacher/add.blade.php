@@ -1,20 +1,21 @@
 @extends('admin.master')
 
-@section('title', 'Edit Siswa')
+@section('title', 'Tambah Guru')
 
 @section('style')
 
 @endsection
 
 @section('isi')
+
     <div class="container-fluid">
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Data Siswa</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tambah Guru</h6>
             </div>
-            <form action="">
-                <div class="card-body ">
+            <div class="card-body ">
+                <form action="">
                     <div class="container">
                         <img
                         {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}}
@@ -27,14 +28,14 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="Aldi Firmansyah">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
-                                <td>NIS</td>
+                                <td>NIP</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="240001">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -58,15 +59,22 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Kelas</td>
+                                <td>Mata Pelajaran</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kelas Perwalian</td>
                                 <td>:</td>
                                 <td>
                                     <fieldset>
                                         <div class="mb-3">
                                             <select class="form-select">
                                                 <option>VII A</option>
-                                                <option>VII B</option>
-                                                <option>VII C</option>
+                                                <option>VIII A</option>
+                                                <option>IX A</option>
                                             </select>
                                         </div>
                                     </fieldset>
@@ -76,35 +84,7 @@
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="+6282345678910">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>:</td>
-                                <td>
-                                    <input type="email" class="form-control" value="aldifirmansyah@example.com">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nama Wali</td>
-                                <td>:</td>
-                                <td>
-                                    <input type="text" class="form-control" value="Ridwan">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Kontak Wali</td>
-                                <td>:</td>
-                                <td>
-                                    <input type="text" class="form-control" value="+6281234567890">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Email Wali</td>
-                                <td>:</td>
-                                <td>
-                                    <input type="email" class="form-control" value="ridwan@example.com">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                         </table>
@@ -113,8 +93,8 @@
                         <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary">Kembali</a>
                         <button class="btn btn-sm btn-success">Simpan</button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'SICEPU - Admin')
+@section('title', 'Beranda Admin')
 
 @section('isi')
     <!-- Begin Page Content -->
@@ -101,7 +101,7 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Pelaporan Data Kehadiran Siswa</h6>
                     </div>
                     <div class="card-body">
                         <h4 class="small font-weight-bold">Pelaporan Kehadiran Mingguan <span class="float-right">20%</span></h4>
