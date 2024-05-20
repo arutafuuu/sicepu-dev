@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'SB Admin 2 - Kelas')
+@section('title', 'Kelas')
 
 @section('styles')
     <!-- Custom styles for this page -->
@@ -20,7 +20,7 @@
             <div class="card-header py-3">
                 <div class="row">
                     <h4 class="m-1 font-weight-bold text-primary">DATA KELAS</h4>
-                    <a class="btn btn-success ml-auto" href="#">Tambah Kelas</a>
+                    <a class="btn btn-success ml-auto" href="{{ route('admin.class.add') }}">Tambah Kelas</a>
                 </div>
             </div>
             <div class="card-body">
@@ -43,8 +43,7 @@
                                 <th>Aldi Firmansyah</th>
                                 <th>
                                     <form action="">
-                                        <a href="{{ route('admin.student.detail') }}" class="btn btn-sm btn-primary mb-1">Detail</a>
-                                        <a href="#" class="btn btn-sm btn-warning mb-1">Edit</a>
+                                        <a href="{{ route('admin.class.edit') }}" class="btn btn-sm btn-warning mb-1">Edit</a>
                                         <button class="btn btn-sm btn-danger mb-1">Hapus</button>
                                     </form>
                                 </th>

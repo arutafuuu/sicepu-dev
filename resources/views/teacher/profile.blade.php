@@ -1,27 +1,24 @@
-@extends('admin.master')
+@extends('teacher.master')
 
-@section('title', 'Detail Guru')
+@section('title', 'Profile Guru')
 
 @section('style')
 
 @endsection
 
 @section('isi')
-
     <div class="container-fluid">
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Detail Guru</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Profile Guru</h6>
             </div>
-            <form action="">
-                <div class="card-body ">
-                    <div class="container">
-                        <img
-                        {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}}
-                        src="{{ asset('img') }}/blank-profile.webp"
+            <div class="card-body ">
+                <div class="container">
+                    <img {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}} src="{{ asset('img') }}/blank-profile.webp"
                         class="rounded mx-auto d-block w-25 h-25" alt="...">
-                    </div>
+                </div>
+                <div class="card mt-3">
                     <div class="card mt-3">
                         <table class="table table-borderless">
                             <tr>
@@ -56,13 +53,11 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="mt-3">
-                        <a href="{{ route('admin.teacher') }}" class="btn btn-sm btn-primary">Kembali</a>
-                        <a href="{{ route('admin.teacher.edit') }}" class="btn btn-sm btn-warning">Edit</a>
-                        <button class="btn btn-sm btn-danger">Hapus</button>
-                    </div>
                 </div>
-            </form>
+                <div class="mt-3">
+                    <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mt-1">Kembali</a>
+                </div>
+            </div>
         </div>
     </div>
 
