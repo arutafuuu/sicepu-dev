@@ -11,7 +11,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Detail Guru</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Detail Siswa</h6>
             </div>
             <form action="">
                 <div class="card-body ">
@@ -71,7 +71,7 @@
                         </table>
                     </div>
                     <div class="mt-3">
-                        <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary mt-1">Kembali</a>
+                        <a href="{{ route('admin.student') }}" class="btn btn-sm btn-primary mt-1">Kembali</a>
                         <a href="{{ route('admin.student.edit') }}" class="btn btn-sm btn-warning mt-1">Edit</a>
                         <button class="btn btn-sm btn-danger mt-1">Hapus</button>
                     </div>

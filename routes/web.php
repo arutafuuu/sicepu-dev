@@ -28,13 +28,18 @@ Route::get('/template/utilities-color', [RouteController::class, 'utilities_colo
 Route::get('/template/utilities-other', [RouteController::class, 'utilities_other'])->name('template.utilities.other');
 
 
-// Main Route
+// Common Route
 
 
 // admin Route
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-Route::get('/admin/class', [AdminController::class, 'class'])->name('admin.class');
 Route::get('/admin/message', [AdminController::class, 'message'])->name('admin.message');
+Route::get('/admin/setting', [AdminController::class, 'setting'])->name('admin.setting');
+Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
+
+Route::get('/admin/class', [AdminController::class, 'class'])->name('admin.class');
+Route::get('/admin/class/add', [AdminController::class, 'add_class'])->name('admin.class.add');
+Route::get('/admin/class/edit', [AdminController::class, 'edit_class'])->name('admin.class.edit');
 
 Route::get('/admin/student', [AdminController::class, 'student'])->name('admin.student');
 Route::get('/admin/student/add', [AdminController::class, 'add_student'])->name('admin.student.add');
@@ -48,6 +53,10 @@ Route::get('/admin/teacher/edit', [AdminController::class, 'edit_teacher'])->nam
 
 // teacher Route
 Route::get('/teacher', [TeacherController::class, 'index'])->name('teacher');
+Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('teacher.profile');
+Route::get('/teacher/setting', [TeacherController::class, 'setting'])->name('teacher.setting');
 
 // student Route
 Route::get('/', [StudentController::class, 'index'])->name('student');
+Route::get('/profile', [StudentController::class, 'profile'])->name('student.profile');
+Route::get('/setting', [StudentController::class, 'setting'])->name('student.setting');

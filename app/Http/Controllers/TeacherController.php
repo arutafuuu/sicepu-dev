@@ -10,4 +10,14 @@ class TeacherController extends Controller
     {
         return view('teacher.index');
     }
+
+    public function profile()
+    {
+        return view('teacher.profile');
+    }
+
+    public function setting()
+    {
+        return view('teacher.setting');
+    }
 }

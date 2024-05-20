@@ -11,14 +11,19 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function class()
-    {
-        return view('admin.class.class');
-    }
-
     public function message()
     {
         return view('admin.message');
+    }
+
+    public function setting()
+    {
+        return view('admin.setting');
+    }
+
+    public function profile()
+    {
+        return view('admin.profile');
     }
 
     public function student()
@@ -59,5 +64,20 @@ class AdminController extends Controller
     public function edit_teacher()
     {
         return view('admin.teacher.edit');
+    }
+
+    public function class()
+    {
+        return view('admin.class.class');
+    }
+
+    public function add_class()
+    {
+        return view('admin.class.add');
+    }
+
+    public function edit_class()
+    {
+        return view('admin.class.edit');
     }
 }
