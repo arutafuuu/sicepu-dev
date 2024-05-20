@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'SB Admin 2 - Guru')
+@section('title', 'Guru')
 
 @section('styles')
     <!-- Custom styles for this page -->
@@ -20,7 +20,7 @@
             <div class="card-header py-3">
                 <div class="row">
                     <h4 class="m-1 font-weight-bold text-primary">DATA GURU</h4>
-                    <a class="btn btn-success ml-auto" href="#">Tambah Guru</a>
+                    <a class="btn btn-success ml-auto" href="{{ route('admin.teacher.add') }}">Tambah Guru</a>
                 </div>
             </div>
             <div class="card-body">

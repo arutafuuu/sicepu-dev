@@ -37,10 +37,12 @@ Route::get('/admin/class', [AdminController::class, 'class'])->name('admin.class
 Route::get('/admin/message', [AdminController::class, 'message'])->name('admin.message');
 
 Route::get('/admin/student', [AdminController::class, 'student'])->name('admin.student');
+Route::get('/admin/student/add', [AdminController::class, 'add_student'])->name('admin.student.add');
 Route::get('/admin/student/detail', [AdminController::class, 'detail_student'])->name('admin.student.detail');
 Route::get('/admin/student/edit', [AdminController::class, 'edit_student'])->name('admin.student.edit');
 
 Route::get('/admin/teacher', [AdminController::class, 'teacher'])->name('admin.teacher');
+Route::get('/admin/teacher/add', [AdminController::class, 'add_teacher'])->name('admin.teacher.add');
 Route::get('/admin/teacher/detail', [AdminController::class, 'detail_teacher'])->name('admin.teacher.detail');
 Route::get('/admin/teacher/edit', [AdminController::class, 'edit_teacher'])->name('admin.teacher.edit');
 

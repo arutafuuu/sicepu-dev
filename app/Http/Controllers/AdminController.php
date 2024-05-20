@@ -26,10 +26,16 @@ class AdminController extends Controller
         return view('admin.student.student');
     }
 
+    public function add_student()
+    {
+        return view('admin.student.add');
+    }
+
     public function detail_student()
     {
         return view('admin.student.detail');
     }
+
     public function edit_student()
     {
         return view('admin.student.edit');
@@ -38,6 +44,11 @@ class AdminController extends Controller
     public function teacher()
     {
         return view('admin.teacher.teacher');
+    }
+
+    public function add_teacher()
+    {
+        return view('admin.teacher.add');
     }
 
     public function detail_teacher()

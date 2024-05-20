@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'Detail Guru')
+@section('title', 'Detail Siswa')
 
 @section('style')
 
@@ -16,8 +16,10 @@
             <form action="">
                 <div class="card-body ">
                     <div class="container">
-                        <img src="{{ asset('theme') }}/img/undraw_profile.svg" class="rounded mx-auto d-block w-25 h-25"
-                            alt="...">
+                        <img
+                        {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}}
+                        src="{{ asset('img') }}/blank-profile.webp"
+                        class="rounded mx-auto d-block w-25 h-25" alt="...">
                     </div>
                     <div class="card mt-3">
                         <table class="table table-borderless">

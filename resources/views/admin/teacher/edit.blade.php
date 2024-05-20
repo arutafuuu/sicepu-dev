@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'Detail Guru')
+@section('title', 'Edit Guru')
 
 @section('style')
 
@@ -12,13 +12,15 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Detail Guru</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Data Guru</h6>
             </div>
             <div class="card-body ">
                 <form action="">
                     <div class="container">
-                        <img src="{{ asset('theme') }}/img/undraw_profile.svg" class="rounded mx-auto d-block w-25 h-25"
-                            alt="...">
+                        <img
+                        {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}}
+                        src="{{ asset('img') }}/blank-profile.webp"
+                        class="rounded mx-auto d-block w-25 h-25" alt="...">
                     </div>
                     <div class="card mt-3">
                         <table class="table table-borderless">
@@ -76,6 +78,13 @@
                                             </select>
                                         </div>
                                     </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kontak</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" class="form-control" value="+6282234567890">
                                 </td>
                             </tr>
                         </table>
