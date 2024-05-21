@@ -37,9 +37,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('student') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-book"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Welcome!</div>
+                <div class="sidebar-brand-text mx-3">SICEPU</div>
             </a>
 
             <!-- Divider -->
@@ -58,51 +58,19 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Penilaian
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item {{ Request::is('template/buttons', 'template/cards') ? 'active' : '' }}">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse {{ Request::is('template/buttons', 'template/cards') ? 'show' : '' }}"
-                    aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item {{ Request::is('template/buttons') ? 'active' : '' }}"
-                            href="{{ route('template.buttons') }}">Buttons</a>
-                        <a class="collapse-item {{ Request::is('template/cards') ? 'active' : '' }}"
-                            href="{{ route('template.cards') }}">Cards</a>
-                    </div>
-                </div>
+            <li class="nav-item {{ Request::is('subject') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('student.subject') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tabel</span></a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li
-                class="nav-item {{ Request::is('template/utilities-color', 'template/utilities-border', 'template/utilities-animation', 'template/utilities-other') ? 'active' : '' }}">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities"
-                    class="collapse {{ Request::is('template/utilities-color', 'template/utilities-border', 'template/utilities-animation', 'template/utilities-other') ? 'show' : '' }}"
-                    aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item {{ Request::is('template/utilities-color') ? 'active' : '' }}"
-                            href="{{ route('template.utilities.color') }}">Colors</a>
-                        <a class="collapse-item {{ Request::is('template/utilities-border') ? 'active' : '' }}"
-                            href="{{ route('template.utilities.border') }}">Borders</a>
-                        <a class="collapse-item {{ Request::is('template/utilities-animation') ? 'active' : '' }}"
-                            href="{{ route('template.utilities.animation') }}">Animations</a>
-                        <a class="collapse-item {{ Request::is('template/utilities-other') ? 'active' : '' }}"
-                            href="{{ route('template.utilities.other') }}">Other</a>
-                    </div>
-                </div>
+            <li class="nav-item {{ Request::is('graphics') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('student.graphics') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Grafik</span></a>
             </li>
 
             <!-- Divider -->
@@ -110,45 +78,14 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Kehadiran
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item {{ Request::is('template/404', 'template/blank') ? 'active' : '' }}">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse {{ Request::is('template/404', 'template/blank') ? 'show' : '' }}"
-                    aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="{{ route('login') }}">Login</a>
-                        <a class="collapse-item" href="{{ route('register') }}">Register</a>
-                        <a class="collapse-item" href="{{ route('forget.password') }}">Forget Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item {{ Request::is('template/404') ? 'active' : '' }}"
-                            href="{{ route('template.not.found') }}">404 Page</a>
-                        <a class="collapse-item {{ Request::is('template/blank') ? 'active' : '' }}"
-                            href="{{ route('template.blank') }}">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Nav Item - Charts -->
-            <li class="nav-item {{ Request::is('template/charts') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('template.charts') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item {{ Request::is('template/tables') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('template.tables') }}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+            <li class="nav-item {{ Request::is('/presence') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('student.presence') }}">
+                    <i class="fas fa-fw fa-calendar"></i>
+                    <span>Rekap Absen</span></a>
             </li>
 
             <!-- Divider -->

@@ -60,3 +60,7 @@ Route::get('/teacher/setting', [TeacherController::class, 'setting'])->name('tea
 Route::get('/', [StudentController::class, 'index'])->name('student');
 Route::get('/profile', [StudentController::class, 'profile'])->name('student.profile');
 Route::get('/setting', [StudentController::class, 'setting'])->name('student.setting');
+Route::get('/subject', [StudentController::class, 'subject'])->name('student.subject');
+Route::get('/detail', [StudentController::class, 'detail_subject'])->name('student.detail');
+Route::get('/graphics', [StudentController::class, 'graphics'])->name('student.graphics');
+Route::get('/presence', [StudentController::class, 'presence'])->name('student.presence');
