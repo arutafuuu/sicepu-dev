@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{ asset('img') }}/sicepu01.png" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img') }}/books.png" type="image/x-icon">
 
 
     <title>SICEPU - @yield('title')</title>
@@ -99,7 +99,7 @@
             <!-- Nav Item - User Message -->
             <li class="nav-item {{ Request::is('admin/message') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.message') }}">
-                    <i class="fas fa-comments fa-2x"></i>
+                    <i class="fas fa-fw fa-comments"></i>
                     <span>Pesan Pengguna</span></a>
             </li>
 

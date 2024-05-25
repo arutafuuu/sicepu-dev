@@ -74,4 +74,9 @@ class RouteController extends Controller
         return view('template.utilities-other');
     }
 
+    public function date()
+    {
+        return view('template.date');
+    }
+
 }

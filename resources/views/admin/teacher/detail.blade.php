@@ -56,10 +56,15 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="mt-3">
-                        <a href="{{ route('admin.teacher') }}" class="btn btn-sm btn-primary">Kembali</a>
-                        <a href="{{ route('admin.teacher.edit') }}" class="btn btn-sm btn-warning">Edit</a>
-                        <button class="btn btn-sm btn-danger">Hapus</button>
+                    <div class="row">
+                        <div class="mt-3">
+                            <a href="{{ route('admin.teacher') }}" class="btn btn-sm btn-primary">Kembali</a>
+                            <a href="{{ route('admin.teacher.edit') }}" class="btn btn-sm btn-warning">Edit</a>
+                        </div>
+                        <div class="mt-3 ml-auto">
+                            <a href="#" class="btn btn-sm btn-success">Reset Password</a>
+                            <button class="btn btn-sm btn-danger">Hapus</button>
+                        </div>
                     </div>
                 </div>
             </form>

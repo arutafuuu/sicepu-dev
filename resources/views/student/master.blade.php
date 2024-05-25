@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="{{ asset('img') }}/sicepu01.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img') }}/books.png" type="image/x-icon">
 
     <title>SICEPU - @yield('title')</title>
 
@@ -36,10 +36,11 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('student') }}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-book"></i>
+                <div class="sidebar-brand-icon rotate-n-0">
+                    {{-- <i class="fas fa-book"></i> --}}
+                    <img src="{{ asset('img') }}/sicepu.png" width="80px" alt="...">
                 </div>
-                <div class="sidebar-brand-text mx-3">SICEPU</div>
+                {{-- <div class="sidebar-brand-text mx-3">SICEPU</div> --}}
             </a>
 
             <!-- Divider -->

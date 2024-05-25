@@ -1,31 +1,45 @@
-@extends('student.master')
+@extends('teacher.master')
 
-@section('title', 'SB Admin 2 - Blank')
+@section('title', 'Siswa')
+
+@section('styles')
+    <!-- Custom styles for this page -->
+    <link href="{{ asset('theme') }}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+@endsection
 
 @section('isi')
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- Table -->
+        <!-- Page Heading -->
+        {{-- <h1 class="h3 mb-2 text-gray-800">Data Guru</h1> --}}
+
+        <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h4 class="m-1 font-weight-bold text-primary">REKAP KEHADIRAN</h4>
+                <div class="row">
+                    <h4 class="m-1 font-weight-bold text-primary">DATA SISWA KELAS VII A</h4>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Tanggal</th>
-                                <th>Kehadiran</th>
-                                <th>Persentase</th>
+                                <th>NIS</th>
+                                <th>Nama</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>3 Januari 2024</th>
-                                <th>6/8</th>
-                                <th>75%</th>
+                                <th>240001</th>
+                                <th>Aldi Firmansyah</th>
+                                <th>
+                                    <a href="{{ route('teacher.student.detail') }}"
+                                        class="btn btn-sm btn-primary mb-1">Detail</a>
+                                </th>
                             </tr>
                         </tbody>
                     </table>

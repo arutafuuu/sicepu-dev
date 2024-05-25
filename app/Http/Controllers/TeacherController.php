@@ -20,4 +20,40 @@ class TeacherController extends Controller
     {
         return view('teacher.setting');
     }
+
+    public function presence()
+    {
+        return view('teacher.presence');
+    }
+
+    public function add_presence()
+    {
+        return view('teacher.add-presence');
+    }
+
+    public function grade()
+    {
+        return view('teacher.grade');
+    }
+
+    public function add_grade()
+    {
+        return view('teacher.add-grade');
+    }
+
+    public function edit_grade()
+    {
+        return view('teacher.edit-grade');
+    }
+
+    public function student()
+    {
+        return view('teacher.student');
+    }
+
+    public function detail_student()
+    {
+        return view('teacher.detail-student');
+    }
+
 }

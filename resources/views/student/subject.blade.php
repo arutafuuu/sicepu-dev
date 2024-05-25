@@ -27,8 +27,8 @@
                             <tr>
                                 <th>Mata Pelajaran</th>
                                 <th>Guru</th>
-                                <th>Rata-rata total</th>
-                                <th>Predikat</th>
+                                <th>Rata-rata Pengetahuan</th>
+                                <th>Rata-rata Keterampilan</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -37,7 +37,7 @@
                                 <th>IPA Terpadu</th>
                                 <th>Budi Santoso</th>
                                 <th>87</th>
-                                <th>A</th>
+                                <th>89</th>
                                 <th>
                                     <a class="btn btn-sm btn-primary" href="{{ route('student.detail') }}">Detail</a>
                                 </th>

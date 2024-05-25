@@ -23,16 +23,19 @@
                         <table>
                             <tr>
                                 <td>Tanggal Laporan</td>
+                                <td>&emsp;</td>
                                 <td>:</td>
                                 <td>01-01-2024</td>
                             </tr>
                             <tr>
                                 <td>Nama Wali</td>
+                                <td>&emsp;</td>
                                 <td>:</td>
                                 <td>Ridwan</td>
                             </tr>
                             <tr>
                                 <td>Nama Siswa</td>
+                                <td>&emsp;</td>
                                 <td>:</td>
                                 <td>Aldi Firmansyah</td>
                             </tr>

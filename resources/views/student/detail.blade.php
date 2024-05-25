@@ -38,7 +38,9 @@
                                 <th>Kelas / Semester</th>
                                 <th></th>
                                 <th>Pengetahuan</th>
+                                <th>Predikat</th>
                                 <th>Keterampilan</th>
+                                <th>Predikat</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,37 +48,49 @@
                                 <td>VII 1</td>
                                 <td>:</td>
                                 <td>78</td>
+                                <td>B+</td>
                                 <td>77</td>
+                                <td>B+</td>
                             </tr>
                             <tr>
                                 <td>VII 2</td>
                                 <td>:</td>
                                 <td>81</td>
+                                <td>A-</td>
                                 <td>82</td>
+                                <td>A-</td>
                             </tr>
                             <tr>
                                 <td>VIII 1</td>
                                 <td>:</td>
                                 <td>85</td>
+                                <td>A-</td>
                                 <td>81</td>
+                                <td>A-</td>
                             </tr>
                             <tr>
                                 <td>VIII 2</td>
                                 <td>:</td>
                                 <td>84</td>
+                                <td>A-</td>
                                 <td>85</td>
+                                <td>A-</td>
                             </tr>
                             <tr>
                                 <td>IX 1</td>
                                 <td>:</td>
                                 <td>87</td>
+                                <td>A</td>
                                 <td>87</td>
+                                <td>A</td>
                             </tr>
                             <tr>
                                 <td>IX 2</td>
                                 <td>:</td>
                                 <td>89</td>
+                                <td>A</td>
                                 <td>91</td>
+                                <td>A</td>
                             </tr>
                         </tbody>
                     </table>

@@ -6,9 +6,15 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
+// Common Route
+
 // Route::get("/", function () {
 //     return redirect("/admin");
 // });
+
+Route::fallback(function() {
+    return view('error.not-found');
+});
 
 Route::get('/login', [RouteController::class, 'login'])->name('login');
 Route::get('/register', [RouteController::class, 'register'])->name('register');
@@ -26,9 +32,7 @@ Route::get('/template/utilities-animation', [RouteController::class, 'utilities_
 Route::get('/template/utilities-border', [RouteController::class, 'utilities_border'])->name('template.utilities.border');
 Route::get('/template/utilities-color', [RouteController::class, 'utilities_color'])->name('template.utilities.color');
 Route::get('/template/utilities-other', [RouteController::class, 'utilities_other'])->name('template.utilities.other');
-
-
-// Common Route
+Route::get('/template/date', [RouteController::class, 'date'])->name('template.date');
 
 
 // admin Route
@@ -55,6 +59,13 @@ Route::get('/admin/teacher/edit', [AdminController::class, 'edit_teacher'])->nam
 Route::get('/teacher', [TeacherController::class, 'index'])->name('teacher');
 Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('teacher.profile');
 Route::get('/teacher/setting', [TeacherController::class, 'setting'])->name('teacher.setting');
+Route::get('/teacher/presence', [TeacherController::class, 'presence'])->name('teacher.presence');
+Route::get('/teacher/add-presence', [TeacherController::class, 'add_presence'])->name('teacher.add.presence');
+Route::get('/teacher/grade', [TeacherController::class, 'grade'])->name('teacher.grade');
+Route::get('/teacher/add-grade', [TeacherController::class, 'add_grade'])->name('teacher.add.grade');
+Route::get('/teacher/edit-grade', [TeacherController::class, 'edit_grade'])->name('teacher.edit.grade');
+Route::get('/teacher/student', [TeacherController::class, 'student'])->name('teacher.student');
+Route::get('/teacher/student/detail', [TeacherController::class, 'detail_student'])->name('teacher.student.detail');
 
 // student Route
 Route::get('/', [StudentController::class, 'index'])->name('student');
