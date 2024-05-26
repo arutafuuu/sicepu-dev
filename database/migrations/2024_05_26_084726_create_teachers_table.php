@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->id();
-            $table->char('teacher_id', 18)->primary();
-            $table->string('name', 80);
+            $table->string('teacher_id', 18)->primary();
+            $table->string('name');
             $table->enum('gender', ['lk', 'pr']);
-            $table->string('subject');
-            $table->char('class_id', 6)->nullable();
-            $table->string('phone')->nullable();
+            $table->string('subject', 50)->nullable();
+            $table->string('phone', 15)->nullable();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

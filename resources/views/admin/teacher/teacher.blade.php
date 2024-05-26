@@ -30,16 +30,14 @@
                             <tr>
                                 <th>NIP</th>
                                 <th>Nama</th>
-                                <th>Kelas Perwalian</th>
                                 <th>Mata Pelajaran</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            {{-- <tr>
                                 <th>197503211998031005</th>
                                 <th>Budi Santoso</th>
-                                <th>VII A</th>
                                 <th>IPA Terpadu</th>
                                 <th>
                                     <form action="">
@@ -48,7 +46,23 @@
                                         <button class="btn btn-sm btn-danger mb-1">Hapus</button>
                                     </form>
                                 </th>
+                            </tr> --}}
+                            @foreach ($teachers as $teacher)
+                            <tr>
+                                <th>{{ $teacher->teacher_id }}</th>
+                                <th>{{ $teacher->name }}</th>
+                                <th>{{ $teacher->subject }}</th>
+                                <th>
+                                    <form action="{{ route('admin.teacher.delete', $teacher->teacher_id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{ route('admin.teacher.detail', $teacher->teacher_id) }}" class="btn btn-sm btn-primary mb-1">Detail</a>
+                                        <a href="{{ route('admin.teacher.edit', $teacher->teacher_id) }}" class="btn btn-sm btn-warning mb-1">Edit</a>
+                                        <button class="btn btn-sm btn-danger mb-1">Hapus</button>
+                                    </form>
+                                </th>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

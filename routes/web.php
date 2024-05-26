@@ -52,8 +52,11 @@ Route::get('/admin/student/edit', [AdminController::class, 'edit_student'])->nam
 
 Route::get('/admin/teacher', [AdminController::class, 'teacher'])->name('admin.teacher');
 Route::get('/admin/teacher/add', [AdminController::class, 'add_teacher'])->name('admin.teacher.add');
-Route::get('/admin/teacher/detail', [AdminController::class, 'detail_teacher'])->name('admin.teacher.detail');
-Route::get('/admin/teacher/edit', [AdminController::class, 'edit_teacher'])->name('admin.teacher.edit');
+Route::get('/admin/teacher/store', [AdminController::class, 'store_teacher'])->name('admin.teacher.store');
+Route::get('/admin/teacher/detail/{detail}', [AdminController::class, 'detail_teacher'])->name('admin.teacher.detail');
+Route::get('/admin/teacher/edit/{id}', [AdminController::class, 'edit_teacher'])->name('admin.teacher.edit');
+Route::put('/admin/teacher/update/{id}', [AdminController::class, 'update_teacher'])->name('admin.teacher.update');
+Route::delete('/admin/teacher/delete/{id}', [AdminController::class, 'delete_teacher'])->name('admin.teacher.delete');
 
 // teacher Route
 Route::get('/teacher', [TeacherController::class, 'index'])->name('teacher');

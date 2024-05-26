@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSubjectRequest;
-use App\Http\Requests\UpdateSubjectRequest;
-use App\Models\Subject;
+use App\Models\Contoh;
+use Illuminate\Http\Request;
 
-class SubjectController extends Controller
+class ContohController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class SubjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSubjectRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Subject $subject)
+    public function show(Contoh $contoh)
     {
         //
     }
@@ -43,7 +42,7 @@ class SubjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Subject $subject)
+    public function edit(Contoh $contoh)
     {
         //
     }
@@ -51,7 +50,7 @@ class SubjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSubjectRequest $request, Subject $subject)
+    public function update(Request $request, Contoh $contoh)
     {
         //
     }
@@ -59,7 +58,7 @@ class SubjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Subject $subject)
+    public function destroy(Contoh $contoh)
     {
         //
     }

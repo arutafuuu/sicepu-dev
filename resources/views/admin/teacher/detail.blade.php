@@ -27,39 +27,39 @@
                             <tr>
                                 <td>Nama</td>
                                 <td>:</td>
-                                <td>Budi Santoso</td>
+                                <td>{{ $teacher->name }}</td>
                             </tr>
                             <tr>
                                 <td>NIP</td>
                                 <td>:</td>
-                                <td>197503211998031005</td>
+                                <td>{{ $teacher->teacher_id }}</td>
                             </tr>
                             <tr>
                                 <td>Jenis Kelamin</td>
                                 <td>:</td>
-                                <td>Laki-laki</td>
+                                <td>{{ $teacher->gender == 'lk' ? 'Laki-laki' : 'Perempuan'}}</td>
                             </tr>
                             <tr>
                                 <td>Mata Pelajaran</td>
                                 <td>:</td>
-                                <td>IPA Terpadu</td>
+                                <td>{{ $teacher->subject }}</td>
                             </tr>
                             <tr>
-                                <td>Kelas Perwalian</td>
+                                <td>Email</td>
                                 <td>:</td>
-                                <td>VII A</td>
+                                <td>{{ $teacher->email }}</td>
                             </tr>
                             <tr>
                                 <td>Kontak</td>
                                 <td>:</td>
-                                <td>+6282234567890</td>
+                                <td>{{ $teacher->phone }}</td>
                             </tr>
                         </table>
                     </div>
                     <div class="row">
                         <div class="mt-3">
                             <a href="{{ route('admin.teacher') }}" class="btn btn-sm btn-primary">Kembali</a>
-                            <a href="{{ route('admin.teacher.edit') }}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{{ route('admin.teacher.edit', $teacher->teacher_id) }}" class="btn btn-sm btn-warning">Edit</a>
                         </div>
                         <div class="mt-3 ml-auto">
                             <a href="#" class="btn btn-sm btn-success">Reset Password</a>
