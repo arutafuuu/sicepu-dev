@@ -13,41 +13,58 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Edit Kelas</h6>
             </div>
-            <form action="">
+            <form action="{{ route('admin.class.update', $class->class_id) }}" method="POST">
+                @csrf
+                @method('PUT')
                 <div class="card-body ">
                     <div class="card mt-3">
                         <table class="table table-borderless">
                             <tr>
                                 <td>Id Kelas</td>
                                 <td>:</td>
-                                <td>2401</td>
+                                <td>
+                                    <input type="text" class="form-control" value="{{ $class->class_id }}"
+                                        name="class_id">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="VII A">
+                                    <input type="text" class="form-control" value="{{ $class->name }}" name="name">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Wali Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="Budi Santoso">
+                                    <fieldset>
+                                        <div class="mb-3">
+                                            <select class="form-select" name="teacher_id">
+                                                <option {{ $class->teacher_id ? '' : 'selected' }} value="">Tidak ada
+                                                </option>
+                                                @foreach ($teachers as $teacher)
+                                                    <option
+                                                        {{ $class->teacher_id == $teacher->teacher_id ? 'selected' : '' }}
+                                                        value="{{ $teacher->teacher_id }}">{{ $teacher->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </fieldset>
                                 </td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <td>Ketua Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="Aldi Firmansyah">
+                                    <input type="text" class="form-control" value="Aldi Firmansyah" name="">
                                 </td>
-                            </tr>
+                            </tr> --}}
                         </table>
                     </div>
                     <div class="mt-3 d-flex justify-content-between">
                         <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary">Kembali</a>
-                        <button class="btn btn-sm btn-success">Simpan</button>
+                        <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                     </div>
                 </div>
             </form>

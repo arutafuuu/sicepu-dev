@@ -31,23 +31,27 @@
                                 <th>Id Kelas</th>
                                 <th>Kelas</th>
                                 <th>Wali Kelas</th>
-                                <th>Ketua Kelas</th>
+                                {{-- <th>Ketua Kelas</th> --}}
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($classes as $index => $class)
                             <tr>
-                                <th>2401</th>
-                                <th>VII A</th>
-                                <th>Budi Santoso</th>
-                                <th>Aldi Firmansyah</th>
+                                <th>{{ $class->class_id }}</th>
+                                <th>{{ $class->name }}</th>
+                                <th>{{ $teachers[$index] }}</th>
+                                {{-- <th>{{ $class->class_id }}/th> --}}
                                 <th>
-                                    <form action="">
-                                        <a href="{{ route('admin.class.edit') }}" class="btn btn-sm btn-warning mb-1">Edit</a>
+                                    <form action="{{ route('admin.class.delete', $class->class_id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{ route('admin.class.edit', $class->class_id) }}" class="btn btn-sm btn-warning mb-1">Edit</a>
                                         <button class="btn btn-sm btn-danger mb-1">Hapus</button>
                                     </form>
                                 </th>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

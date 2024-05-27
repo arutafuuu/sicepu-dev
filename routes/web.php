@@ -43,17 +43,23 @@ Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.p
 
 Route::get('/admin/class', [AdminController::class, 'class'])->name('admin.class');
 Route::get('/admin/class/add', [AdminController::class, 'add_class'])->name('admin.class.add');
-Route::get('/admin/class/edit', [AdminController::class, 'edit_class'])->name('admin.class.edit');
+Route::get('/admin/class/store', [AdminController::class, 'store_class'])->name('admin.class.store');
+Route::get('/admin/class/edit/{id}', [AdminController::class, 'edit_class'])->name('admin.class.edit');
+Route::put('/admin/class/update/{id}', [AdminController::class, 'update_class'])->name('admin.class.update');
+Route::delete('/admin/class/delete/{id}', [AdminController::class, 'delete_class'])->name('admin.class.delete');
 
 Route::get('/admin/student', [AdminController::class, 'student'])->name('admin.student');
 Route::get('/admin/student/add', [AdminController::class, 'add_student'])->name('admin.student.add');
-Route::get('/admin/student/detail', [AdminController::class, 'detail_student'])->name('admin.student.detail');
-Route::get('/admin/student/edit', [AdminController::class, 'edit_student'])->name('admin.student.edit');
+Route::get('/admin/student/store', [AdminController::class, 'store_student'])->name('admin.student.store');
+Route::get('/admin/student/detail/{id}', [AdminController::class, 'detail_student'])->name('admin.student.detail');
+Route::get('/admin/student/edit/{id}', [AdminController::class, 'edit_student'])->name('admin.student.edit');
+Route::put('/admin/student/update/{id}', [AdminController::class, 'update_student'])->name('admin.student.update');
+Route::delete('/admin/student/delete/{id}', [AdminController::class, 'delete_student'])->name('admin.student.delete');
 
 Route::get('/admin/teacher', [AdminController::class, 'teacher'])->name('admin.teacher');
 Route::get('/admin/teacher/add', [AdminController::class, 'add_teacher'])->name('admin.teacher.add');
 Route::get('/admin/teacher/store', [AdminController::class, 'store_teacher'])->name('admin.teacher.store');
-Route::get('/admin/teacher/detail/{detail}', [AdminController::class, 'detail_teacher'])->name('admin.teacher.detail');
+Route::get('/admin/teacher/detail/{id}', [AdminController::class, 'detail_teacher'])->name('admin.teacher.detail');
 Route::get('/admin/teacher/edit/{id}', [AdminController::class, 'edit_teacher'])->name('admin.teacher.edit');
 Route::put('/admin/teacher/update/{id}', [AdminController::class, 'update_teacher'])->name('admin.teacher.update');
 Route::delete('/admin/teacher/delete/{id}', [AdminController::class, 'delete_teacher'])->name('admin.teacher.delete');

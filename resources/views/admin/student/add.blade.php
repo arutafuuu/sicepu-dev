@@ -13,7 +13,8 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Tambah Siswa</h6>
             </div>
-            <form action="">
+            <form action="{{ route('admin.student.store') }}">
+                @csrf
                 <div class="card-body ">
                     <div class="container">
                         <img
@@ -27,14 +28,14 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="name">
                                 </td>
                             </tr>
                             <tr>
                                 <td>NIS</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="student_id">
                                 </td>
                             </tr>
                             <tr>
@@ -42,16 +43,16 @@
                                 <td>:</td>
                                 <td>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1" checked>
-                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="lk" value="lk" checked>
+                                        <label class="form-check-label" for="lk">
                                             Laki-laki
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2">
-                                        <label class="form-check-label" for="flexRadioDefault2">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="pr" value="pr">
+                                        <label class="form-check-label" for="pr">
                                             Perempuan
                                         </label>
                                     </div>
@@ -63,10 +64,11 @@
                                 <td>
                                     <fieldset>
                                         <div class="mb-3">
-                                            <select class="form-select">
-                                                <option>VII A</option>
-                                                <option>VII B</option>
-                                                <option>VII C</option>
+                                            <select class="form-select" name="class_id">
+                                                <option value="">Tidak ada</option>
+                                                @foreach  ($classes as $index => $class)
+                                                    <option value="p">{{ $class->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </fieldset>
@@ -76,42 +78,42 @@
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="phone">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" name="email">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Nama Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="parent">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kontak Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="par_phone">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" name="par_email">
                                 </td>
                             </tr>
                         </table>
                     </div>
                     <div class="mt-3 d-flex justify-content-between">
                         <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary">Kembali</a>
-                        <button class="btn btn-sm btn-success">Simpan</button>
+                        <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                     </div>
                 </div>
             </form>

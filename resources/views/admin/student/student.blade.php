@@ -35,18 +35,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>240001</th>
-                                <th>Aldi Firmansyah</th>
-                                <th>VII A</th>
-                                <th>
-                                    <form action="">
-                                        <a href="{{ route('admin.student.detail') }}" class="btn btn-sm btn-primary mb-1">Detail</a>
-                                        <a href="{{ route('admin.student.edit') }}" class="btn btn-sm btn-warning mb-1">Edit</a>
-                                        <button class="btn btn-sm btn-danger mb-1">Hapus</button>
-                                    </form>
-                                </th>
-                            </tr>
+                            @foreach ($students as $index => $student)
+                                <tr>
+                                    <th>{{ $student->student_id }}</th>
+                                    <th>{{ $student->name }}</th>
+                                    <th>{{ $classes[$index] }}</th>
+                                    <th>
+                                        <form action="{{ route('admin.student.delete', $student->student_id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a href="{{ route('admin.student.detail', $student->student_id) }}"
+                                                class="btn btn-sm btn-primary mb-1">Detail</a>
+                                            <a href="{{ route('admin.student.edit', $student->student_id) }}"
+                                                class="btn btn-sm btn-warning mb-1">Edit</a>
+                                            <button class="btn btn-sm btn-danger mb-1" type="submit">Hapus</button>
+                                        </form>
+                                    </th>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

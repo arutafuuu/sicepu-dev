@@ -14,7 +14,9 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Detail Guru</h6>
             </div>
-            <form action="">
+            <form action="{{ route('admin.teacher.delete', $teacher->teacher_id) }}" method="POST">
+                @csrf
+                @method('DELETE')
                 <div class="card-body ">
                     <div class="container">
                         <img
