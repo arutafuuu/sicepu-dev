@@ -27,21 +27,25 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>NIS</th>
                                     <th>Nama</th>
                                     <th>Pengetahuan</th>
                                     <th>Keterampilan</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($students as $student)
                                 <tr>
-                                    <th>Aldi Firmansyah</th>
+                                    <th>{{$student->student_id}}</th>
+                                    <th>{{$student->name}}</th>
                                     <th>
-                                        <input type="number" class="form-control" value="78">
+                                        <input type="number" class="form-control" name="pengetahuan" value="{{$}}">
                                     </th>
                                     <th>
-                                        <input type="number" class="form-control" value="80">
+                                        <input type="number" class="form-control" name="keterampilan">
                                     </th>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -26,7 +26,6 @@
                         <thead>
                             <tr>
                                 <th>Mata Pelajaran</th>
-                                <th>Guru</th>
                                 <th>Rata-rata Pengetahuan</th>
                                 <th>Rata-rata Keterampilan</th>
                                 <th>Aksi</th>
@@ -35,7 +34,6 @@
                         <tbody>
                             <tr>
                                 <th>IPA Terpadu</th>
-                                <th>Budi Santoso</th>
                                 <th>87</th>
                                 <th>89</th>
                                 <th>

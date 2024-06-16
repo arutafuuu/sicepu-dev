@@ -17,20 +17,24 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
+                                <th>ID Mapel</th>
                                 <th>Mata Pelajaran</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($subjects as $subject)
                             <tr>
-                                <th>IPA Terpadu</th>
+                                <th>{{ $subject->subject_id }}</th>
+                                <th>{{ $subject->name }}</th>
                                 <th>
-                                    <a class="btn btn-success" href="{{ route('teacher.add.grade') }}">Tambah</a>
+                                    <a class="btn btn-success" href="{{ route('teacher.add.grade', $subject->subject_id) }}">Tambah</a>
                                     {{-- <a class="btn btn-warning" href="{{ route('teacher.edit.grade') }}">Edit</a> --}}
                                     <button class="btn btn-warning" data-toggle="modal"
                                         data-target="#choiceModal">Edit</button>
                                 </th>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -66,7 +70,6 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="" class="btn btn-secondary">Tutup</button>
                         <button type="submit" class="btn btn-primary">Edit</button>
                     </div>
                 </form>

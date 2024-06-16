@@ -1,6 +1,6 @@
 @extends('student.master')
 
-@section('title', 'SB Admin 2 - Blank')
+@section('title', 'Kehadiran')
 
 @section('isi')
     <!-- Begin Page Content -->

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Teacher;
+use App\Models\Student;
+use App\Models\Subject;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -22,6 +25,7 @@ class TeacherController extends Controller
         return view('teacher.setting');
     }
 
+    // all presence
     public function presence()
     {
         return view('teacher.presence');
@@ -32,29 +36,37 @@ class TeacherController extends Controller
         return view('teacher.add-presence');
     }
 
+    // all grade
     public function grade()
     {
-        return view('teacher.grade');
+        $subjects = Subject::all();
+        return view('teacher.grade', ['subjects' => $subjects]);
     }
 
     public function add_grade()
     {
-        return view('teacher.add-grade');
+        $students = Student::where('class_id', '2301')->get();
+        return view('teacher.add-grade', ['students' => $students]);
     }
 
     public function edit_grade()
     {
-        return view('teacher.edit-grade');
+        $students = Student::where('class_id', '2301')->get();
+        return view('teacher.edit-grade', ['students' => $students]);
     }
 
+    // all student
     public function student()
     {
-        return view('teacher.student');
+        $students = Student::where('class_id', '2301')->get();
+        // foreach ($students as $student) echo $student . PHP_EOL;
+        return view('teacher.student', ['students' => $students]);
     }
 
-    public function detail_student()
+    public function detail_student($id)
     {
-        return view('teacher.detail-student');
+        $student = Student::find($id);
+        return view('teacher.detail-student', ['student' => $student]);
     }
 
 }

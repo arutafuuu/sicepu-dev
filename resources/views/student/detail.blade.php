@@ -18,16 +18,10 @@
                 {{-- <form action=""> --}}
                 <table>
                     <tr>
-                        <td>Mata Kuliah</td>
+                        <td>Mata Pelajaran</td>
                         <td>&emsp;</td>
                         <td>:</td>
                         <td>IPA Terpadu</td>
-                    </tr>
-                    <tr>
-                        <td>Guru</td>
-                        <td>&emsp;</td>
-                        <td>:</td>
-                        <td>Budi Santoso</td>
                     </tr>
                 </table>
                 {{-- </form> --}}

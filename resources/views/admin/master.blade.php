@@ -92,8 +92,15 @@
             <!-- Nav Item - Admin Management -->
             <li class="nav-item {{ Request::is('admin/class') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.class') }}">
-                    <i class="fas fa-fw fa-book"></i>
+                    <i class="fas fa-fw fa-graduation-cap"></i>
                     <span>Kelas</span></a>
+            </li>
+
+            <!-- Nav Item - Admin Management -->
+            <li class="nav-item {{ Request::is('admin/subject') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.subject') }}">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Mata Pelajaran</span></a>
             </li>
 
             <!-- Nav Item - User Message -->

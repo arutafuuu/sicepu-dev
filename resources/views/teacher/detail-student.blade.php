@@ -16,7 +16,7 @@
             <form action="">
                 <div class="card-body ">
                     <div class="container">
-                        <img {{-- src="{{ asset('theme') }}/img/undraw_profile.svg" --}} src="{{ asset('img') }}/blank-profile.webp"
+                        <img src="{{ asset('img') }}/blank-profile.webp"
                             class="rounded mx-auto d-block w-25 h-25" alt="...">
                     </div>
                     <div class="card mt-3">
@@ -24,47 +24,42 @@
                             <tr>
                                 <td>Nama</td>
                                 <td>:</td>
-                                <td>Aldi Firmansyah</td>
+                                <td>{{ $student->name }}</td>
                             </tr>
                             <tr>
                                 <td>NIS</td>
                                 <td>:</td>
-                                <td>240001</td>
+                                <td>{{ $student->student_id }}</td>
                             </tr>
                             <tr>
                                 <td>Jenis Kelamin</td>
                                 <td>:</td>
-                                <td>Laki-laki</td>
-                            </tr>
-                            <tr>
-                                <td>Kelas</td>
-                                <td>:</td>
-                                <td>VII A</td>
+                                <td>{{ $student->gender == 'lk' ? 'Laki-laki' : 'Perempuan' }}</td>
                             </tr>
                             <tr>
                                 <td>Kontak</td>
                                 <td>:</td>
-                                <td>+6282345678910</td>
+                                <td>{{ $student->phone }}</td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
-                                <td>aldifirmansyah@example.com</td>
+                                <td>{{ $student->email }}</td>
                             </tr>
                             <tr>
                                 <td>Nama Wali</td>
                                 <td>:</td>
-                                <td>Ridwan</td>
+                                <td>{{ $student->parent_name }}</td>
                             </tr>
                             <tr>
                                 <td>Kontak Wali</td>
                                 <td>:</td>
-                                <td>+6281234567890</td>
+                                <td>{{ $student->parent_phone }}</td>
                             </tr>
                             <tr>
                                 <td>Email Wali</td>
                                 <td>:</td>
-                                <td>ridwan@example.com</td>
+                                <td>{{ $student->parent_email }}</td>
                             </tr>
                         </table>
                     </div>

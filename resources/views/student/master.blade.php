@@ -83,7 +83,7 @@
             </div>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item {{ Request::is('/presence') ? 'active' : '' }}">
+            <li class="nav-item {{ Request::is('presence') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('student.presence') }}">
                     <i class="fas fa-fw fa-calendar"></i>
                     <span>Rekap Absen</span></a>

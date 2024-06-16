@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->char('subject_id', 3)->primary();
             $table->string('name', 50);
-            $table->string('teacher_id', 18)->nullable();
             $table->timestamps();
         });
     }

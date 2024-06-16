@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Classes;
 use App\Models\Student;
 use App\Models\Teacher;
+use App\Models\Subject;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -12,12 +14,27 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        $studentsCount = Student::count();
+        $teachersCount = Teacher::count();
+        $messagesCount = Message::count();
+        return view('admin.index', [
+            'studentsCount' => $studentsCount,
+            'teachersCount' => $teachersCount,
+            'messagesCount' => $messagesCount
+        ]);
     }
 
     public function message()
     {
-        return view('admin.message');
+        $messages = Message::all();
+        return view('admin.message', ['messages' => $messages]);
+    }
+
+    public function done_message($id)
+    {
+        $message = Message::find($id);
+        $message->delete();
+        return redirect('/admin/message');
     }
 
     public function setting()
@@ -71,8 +88,6 @@ class AdminController extends Controller
         $student->parent_email = $request->par_email;
         $student->parent_phone = $request->par_phone;
 
-        echo $request->class;
-
         $student->save();
         return redirect('admin/student');
     }
@@ -94,14 +109,6 @@ class AdminController extends Controller
     {
         $student = Student::find($id);
         $classes = Classes::all();
-
-        // foreach ($classes as $class) {
-        //     echo $class->class_id . "\n" . PHP_EOL;
-        // }
-
-        // echo "================";
-        // echo $student->class_id;
-
         return view('admin.student.edit', ['student' => $student, 'classes' => $classes]);
     }
 
@@ -129,8 +136,6 @@ class AdminController extends Controller
 
     public function add_teacher()
     {
-        // $allClasses = Classes::all();
-        // $classes = $allClasses->whereNull('teacher_id');
         return view('admin.teacher.add');
     }
 
@@ -145,14 +150,6 @@ class AdminController extends Controller
         $teacher->phone = $request->phone;
         $teacher->save();
 
-        // if ($request->class != null)
-        // {
-        //     $class = Classes::find($request->class);
-        //     $class->update([
-        //         'teacher_id'=>$request->teacher_id,
-        //     ]);
-        // }
-
         return redirect('admin/teacher');
     }
 
@@ -166,22 +163,12 @@ class AdminController extends Controller
     {
         $teacher = Teacher::find($id);
 
-        // $classes = Classes::where('teacher_id', $teacher->teacher_id)->orWhereNull('teacher_id')->get(['class_id', 'name', 'teacher_id']);
-
         return view('admin.teacher.edit',  ['teacher' => $teacher]);
     }
 
     public function update_teacher(Request $request, $id)
     {
         $teacher = Teacher::find($id);
-
-        // if ($request->class)
-        // {
-        //     $class = Classes::find($request->class);
-        //     $class->update([
-        //         'teacher_id'=>$request->teacher_id,
-        //     ]);
-        // }
 
         $teacher->update($request->all());
 
@@ -196,7 +183,6 @@ class AdminController extends Controller
 
         if ($class)
         {
-            // $id_class = Classes::find($class->class_id);
             $class->update([
                 'teacher_id'=>null,
             ]);
@@ -242,7 +228,6 @@ class AdminController extends Controller
             {
                 if ($class->teacher_id == $teacher->teacher_id)
                 {
-                    // echo $teacher->name . PHP_EOL;
                     $found = true;
                     break;
                 }
@@ -285,7 +270,6 @@ class AdminController extends Controller
 
                 if ($class->teacher_id == $teacher->teacher_id)
                 {
-                    // echo $teacher->name . PHP_EOL;
                     $found = true;
 
                     if ($class->class_id == $id) $found = false;
@@ -300,8 +284,6 @@ class AdminController extends Controller
                 $validate_teacher[] = $teacher;
             }
         }
-
-        // foreach ($validate_teacher as $tc) echo $tc . PHP_EOL;
 
         return view('admin.class.edit', ['class' => $class_choose, 'teachers' => $validate_teacher]);
     }
@@ -318,5 +300,46 @@ class AdminController extends Controller
         $class = Classes::find($id);
         $class->delete();
         return redirect('admin/class');
+    }
+
+    // all subject
+    public function subject()
+    {
+        $subjects = Subject::all();
+        return view('admin.subject.subject', ['subjects' => $subjects]);
+    }
+
+    public function add_subject()
+    {
+        return view('admin.subject.add');
+    }
+
+    public function store_subject(Request $request)
+    {
+        $subject = new Subject();
+        $subject->subject_id =$request->subject_id;
+        $subject->name =$request->name;
+        $subject->save();
+        return redirect('/admin/subject');
+    }
+
+    public function edit_subject($id)
+    {
+        $subject = Subject::find($id);
+        return view('admin.subject.edit', ['subject' => $subject]);
+    }
+
+    public function update_subject(Request $request, $id)
+    {
+        $subject = Subject::find($id);
+        $subject->update($request->all());
+        return redirect('/admin/subject');
+    }
+
+    public function destroy_subject($id)
+    {
+        $subject = Subject::find($id);
+        $subject->delete();
+        return redirect('/admin/subject');
     }
 }

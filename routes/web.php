@@ -37,13 +37,15 @@ Route::get('/template/date', [RouteController::class, 'date'])->name('template.d
 
 // admin Route
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-Route::get('/admin/message', [AdminController::class, 'message'])->name('admin.message');
 Route::get('/admin/setting', [AdminController::class, 'setting'])->name('admin.setting');
 Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
 
+Route::get('/admin/message', [AdminController::class, 'message'])->name('admin.message');
+Route::delete('/admin/message/{id}', [AdminController::class, 'done_message'])->name('admin.message.done');
+
 Route::get('/admin/class', [AdminController::class, 'class'])->name('admin.class');
 Route::get('/admin/class/add', [AdminController::class, 'add_class'])->name('admin.class.add');
-Route::get('/admin/class/store', [AdminController::class, 'store_class'])->name('admin.class.store');
+Route::post('/admin/class/store', [AdminController::class, 'store_class'])->name('admin.class.store');
 Route::get('/admin/class/edit/{id}', [AdminController::class, 'edit_class'])->name('admin.class.edit');
 Route::put('/admin/class/update/{id}', [AdminController::class, 'update_class'])->name('admin.class.update');
 Route::delete('/admin/class/delete/{id}', [AdminController::class, 'delete_class'])->name('admin.class.delete');
@@ -64,6 +66,13 @@ Route::get('/admin/teacher/edit/{id}', [AdminController::class, 'edit_teacher'])
 Route::put('/admin/teacher/update/{id}', [AdminController::class, 'update_teacher'])->name('admin.teacher.update');
 Route::delete('/admin/teacher/delete/{id}', [AdminController::class, 'delete_teacher'])->name('admin.teacher.delete');
 
+Route::get('/admin/subject', [AdminController::class, 'subject'])->name('admin.subject');
+Route::get('/admin/subject/add', [AdminController::class, 'add_subject'])->name('admin.subject.add');
+Route::post('/admin/subject/store', [AdminController::class, 'store_subject'])->name('admin.subject.store');
+Route::get('/admin/subject/edit/{id}', [AdminController::class, 'edit_subject'])->name('admin.subject.edit');
+Route::put('/admin/subject/update/{id}', [AdminController::class, 'update_subject'])->name('admin.subject.update');
+Route::delete('/admin/subject/delete/{id}', [AdminController::class, 'destroy_subject'])->name('admin.subject.delete');
+
 // teacher Route
 Route::get('/teacher', [TeacherController::class, 'index'])->name('teacher');
 Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('teacher.profile');
@@ -72,9 +81,10 @@ Route::get('/teacher/presence', [TeacherController::class, 'presence'])->name('t
 Route::get('/teacher/add-presence', [TeacherController::class, 'add_presence'])->name('teacher.add.presence');
 Route::get('/teacher/grade', [TeacherController::class, 'grade'])->name('teacher.grade');
 Route::get('/teacher/add-grade', [TeacherController::class, 'add_grade'])->name('teacher.add.grade');
+Route::get('/teacher/store-grade', [TeacherController::class, 'store_grade'])->name('teacher.store.grade');
 Route::get('/teacher/edit-grade', [TeacherController::class, 'edit_grade'])->name('teacher.edit.grade');
 Route::get('/teacher/student', [TeacherController::class, 'student'])->name('teacher.student');
-Route::get('/teacher/student/detail', [TeacherController::class, 'detail_student'])->name('teacher.student.detail');
+Route::get('/teacher/student/detail/{id}', [TeacherController::class, 'detail_student'])->name('teacher.student.detail');
 
 // student Route
 Route::get('/', [StudentController::class, 'index'])->name('student');

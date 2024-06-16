@@ -43,21 +43,25 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>NIS</th>
                                     <th>Nama</th>
                                     <th>Pengetahuan</th>
                                     <th>Keterampilan</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($students as $i => $student)
                                 <tr>
-                                    <th>Aldi Firmansyah</th>
+                                    <th>{{$student->student_id}}</th>
+                                    <th>{{$student->name}}</th>
                                     <th>
-                                        <input type="number" class="form-control">
+                                        <input type="number" class="form-control" name="pengetahuan">
                                     </th>
                                     <th>
-                                        <input type="number" class="form-control">
+                                        <input type="number" class="form-control" name="keterampilan">
                                     </th>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

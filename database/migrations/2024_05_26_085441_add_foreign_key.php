@@ -26,7 +26,7 @@ return new class extends Migration
         });
 
         Schema::table('subjects', function (Blueprint $table) {
-            $table->foreign('teacher_id')->references('teacher_id')->on('teachers');
+            // $table->foreign('teacher_id')->references('teacher_id')->on('teachers');
         });
 
         Schema::table('grades', function (Blueprint $table) {
@@ -55,7 +55,7 @@ return new class extends Migration
         });
 
         Schema::table('subjects', function (Blueprint $table) {
-            $table->dropForeign(['teacher_id']);
+            // $table->dropForeign(['teacher_id']);
         });
 
         Schema::table('classes', function (Blueprint $table) {
@@ -63,11 +63,13 @@ return new class extends Migration
         });
 
         Schema::table('teachers', function (Blueprint $table) {
-            $table->dropForeign(['teacher_id']);
+            // $table->dropForeign(['teacher_id']);
         });
 
         Schema::table('students', function (Blueprint $table) {
-            $table->dropForeign(['class_id', 'student_id']);
+            $table->dropForeign(['class_id',
+            // 'student_id'
+        ]);
         });
     }
 };
