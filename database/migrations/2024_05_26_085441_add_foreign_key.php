@@ -36,6 +36,7 @@ return new class extends Migration
 
         Schema::table('attendances', function (Blueprint $table) {
             $table->foreign('student_id')->references('student_id')->on('students');
+            $table->foreign('class_id')->references('class_id')->on('classes');
         });
     }
 
@@ -47,7 +48,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('attendances', function (Blueprint $table) {
-            $table->dropForeign(['student_id']);
+            $table->dropForeign(['student_id', 'class_id']);
         });
 
         Schema::table('grades', function (Blueprint $table) {

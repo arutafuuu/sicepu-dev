@@ -9,14 +9,15 @@
         <div class="mb-2">
             <a href="{{ url()->previous() }}" class="btn btn-sm btn-primary">Kembali</a>
         </div>
-        
+
         <!-- Tables -->
-        <form action="">
+        <form action="{{ route('teacher.store.presence') }}" method="POST">
+            @csrf
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <div class="row">
                         <h4 class="m-1 font-weight-bold text-primary">REKAP KEHADIRAN</h4>
-                        <button class="btn btn-success ml-auto" type="">Simpan</button>
+                        <button class="btn btn-success ml-auto" type="submit">Simpan</button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -27,7 +28,7 @@
                                     <td>&emsp;</td>
                                     <td>:</td>
                                     <td>
-                                        <input type="number" class="form-control">
+                                        <input type="number" class="form-control" name="fulltime" required>
                                     </td>
                                     <td>&emsp;</td>
                                     <td>Tanggal</td>
@@ -44,16 +45,18 @@
                             <thead>
                                 <tr>
                                     <th>Nama</th>
-                                    <th>TIDAK Hadir</th>
+                                    <th>Jumlah ketidakhadiran Hadir</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($students as $student)
                                 <tr>
-                                    <th>Aldi Firmansyah</th>
+                                    <th>{{ $student->name }}</th>
                                     <th>
-                                        <input type="number" class="form-control">
+                                        <input type="number" class="form-control" name="attendance[{{$student->student_id}}]" required>
                                     </th>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

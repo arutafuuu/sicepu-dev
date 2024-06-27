@@ -45,7 +45,7 @@
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">85,7</div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-person fa-2x text-gray-300"></i>
+                                <i class="fas fa-book fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->char('student_id', 6);
             $table->date('date');
-            $table->integer('attend_class');
+            $table->integer('attend');
+            $table->char('class_id',4);
             $table->timestamps();
         });
     }

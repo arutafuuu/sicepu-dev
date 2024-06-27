@@ -6,6 +6,7 @@ use App\Models\Teacher;
 use App\Models\Student;
 use App\Models\Subject;
 use App\Models\Grade;
+use App\Models\Attendance;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -28,12 +29,33 @@ class TeacherController extends Controller
     // all presence
     public function presence()
     {
+        // $presences = Attendance::where
         return view('teacher.presence');
     }
 
     public function add_presence()
     {
-        return view('teacher.add-presence');
+        $students = Student::where('class_id', '2301')->get();
+        return view('teacher.add-presence', ['students' => $students]);
+    }
+
+    public function store_presence(Request $request)
+    {
+        $attendances = $request->input('attendance');
+        $fulltime = $request->fulltime;
+        $date = $request->date;
+        $class_id = '2301';
+
+        foreach ($attendances as $index => $attendance)
+        {
+            $attend = new Attendance();
+            $attend->student_id = $index;
+            $attend->attend = $fulltime - $attendance;
+            $attend->date = $date;
+            $attend->class_id = $class_id;
+            $attend->save();
+        }
+        return redirect('/teacher/presence');
     }
 
     // all grade

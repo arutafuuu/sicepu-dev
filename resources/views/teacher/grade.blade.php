@@ -19,21 +19,34 @@
                             <tr>
                                 <th>ID Mapel</th>
                                 <th>Mata Pelajaran</th>
+                                <th>Semester</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($subjects as $subject)
-                            <tr>
-                                <th>{{ $subject->subject_id }}</th>
-                                <th>{{ $subject->name }}</th>
-                                <th>
-                                    <a class="btn btn-success" href="{{ route('teacher.add.grade', $subject->subject_id) }}">Tambah</a>
-                                    {{-- <a class="btn btn-warning" href="{{ route('teacher.edit.grade') }}">Edit</a> --}}
-                                    <button class="btn btn-warning" data-toggle="modal"
-                                        data-target="#choiceModal">Edit</button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ $subject->subject_id }}</th>
+                                    <th>{{ $subject->name }}</th>
+                                    <th>
+                                        {{-- <select class="form-control" id="choiceSemester" name="choiceSemester"> --}}
+                                        <select class="form-control" name="semester">
+                                            <option selected value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <a class="btn btn-success"
+                                            href="{{ route('teacher.add.grade', $subject->subject_id) }}">Tambah</a>
+                                        {{-- <a class="btn btn-warning" href="{{ route('teacher.edit.grade') }}">Edit</a> --}}
+                                        <button class="btn btn-warning" data-toggle="modal"
+                                            data-target="#choiceModal">Edit</button>
+                                    </th>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -57,16 +70,7 @@
                 <form action="{{ route('teacher.edit.grade') }}">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="choiceSemester">Pilih Semester</label>
-                            {{-- <select class="form-control" id="choiceSemester" name="choiceSemester"> --}}
-                            <select class="form-control">
-                                <option selected>VII 1</option>
-                                <option>VII 2</option>
-                                <option>VIII 1</option>
-                                <option>VIII 2</option>
-                                <option>IX 1</option>
-                                <option>IX 2</option>
-                            </select>
+
                         </div>
                     </div>
                     <div class="modal-footer">

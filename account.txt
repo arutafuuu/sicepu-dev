@@ -1,0 +1,8 @@
+admin = wangeun@example.com, pass=superadmin
+
+teacher = budisantoso@example.com, pass=teacher
+
+student = aldifirmansyah@example.com, pass=student
+
+skema login adalah skema sementara, pengembangan fitur login rencananya menggunakan
+library laravel/ui yang masih dalam tahap percobaan.

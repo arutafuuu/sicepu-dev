@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+
 
 class RouteController extends Controller
 {
@@ -39,7 +41,7 @@ class RouteController extends Controller
         return view('template.forget-password');
     }
 
-    public function login()
+    public function login_template()
     {
         return view('template.login');
     }
@@ -79,4 +81,30 @@ class RouteController extends Controller
         return view('template.date');
     }
 
+    public function login()
+    {
+        return view('login');
+    }
+
+    // public function redirect_login(Request $request)
+    // {
+    //     $email = $request->email;
+    //     $pass = $request->password;
+    //     if ($email == "wangeun@example.com" && $pass == "superadmin")
+    //     {
+    //         return redirect('/admin');
+    //     }
+    //     elseif ($email = "budisantoso@example.com" && $pass == "teacher")
+    //     {
+    //         return redirect('/teacher');
+    //     }
+    //     elseif ($email = "aldifirmansyah@example.com" && $pass == "student")
+    //     {
+    //         return redirect('/student');
+    //     }
+    //     else
+    //     {
+    //         return redirect('/');
+    //     }
+    // }
 }

@@ -16,23 +16,25 @@ Route::fallback(function() {
     return view('error.not-found');
 });
 
-Route::get('/login', [RouteController::class, 'login'])->name('login');
-Route::get('/register', [RouteController::class, 'register'])->name('register');
-Route::get('/forget-password', [RouteController::class, 'forget_password'])->name('forget.password');
+// Route::get('/', [RouteController::class, 'login'])->name('login');
+// Route::get('/login-template', [RouteController::class, 'login_tempate'])->name('template.login');
+// Route::get('/register', [RouteController::class, 'register'])->name('register');
+// Route::get('/forget-password', [RouteController::class, 'forget_password'])->name('forget.password');
+// Route::get('/redirect-login', [RouteController::class, 'redirect_login'])->name('redirect.login');
 
 // template route
-Route::get('/template', [RouteController::class, 'index'])->name('template');
-Route::get('/template/404', [RouteController::class, 'not_found'])->name('template.not.found');
-Route::get('/template/blank', [RouteController::class, 'blank'])->name('template.blank');
-Route::get('/template/buttons', [RouteController::class, 'buttons'])->name('template.buttons');
-Route::get('/template/cards', [RouteController::class, 'cards'])->name('template.cards');
-Route::get('/template/charts', [RouteController::class, 'charts'])->name('template.charts');
-Route::get('/template/tables', [RouteController::class, 'tables'])->name('template.tables');
-Route::get('/template/utilities-animation', [RouteController::class, 'utilities_animation'])->name('template.utilities.animation');
-Route::get('/template/utilities-border', [RouteController::class, 'utilities_border'])->name('template.utilities.border');
-Route::get('/template/utilities-color', [RouteController::class, 'utilities_color'])->name('template.utilities.color');
-Route::get('/template/utilities-other', [RouteController::class, 'utilities_other'])->name('template.utilities.other');
-Route::get('/template/date', [RouteController::class, 'date'])->name('template.date');
+// Route::get('/template', [RouteController::class, 'index'])->name('template');
+// Route::get('/template/404', [RouteController::class, 'not_found'])->name('template.not.found');
+// Route::get('/template/blank', [RouteController::class, 'blank'])->name('template.blank');
+// Route::get('/template/buttons', [RouteController::class, 'buttons'])->name('template.buttons');
+// Route::get('/template/cards', [RouteController::class, 'cards'])->name('template.cards');
+// Route::get('/template/charts', [RouteController::class, 'charts'])->name('template.charts');
+// Route::get('/template/tables', [RouteController::class, 'tables'])->name('template.tables');
+// Route::get('/template/utilities-animation', [RouteController::class, 'utilities_animation'])->name('template.utilities.animation');
+// Route::get('/template/utilities-border', [RouteController::class, 'utilities_border'])->name('template.utilities.border');
+// Route::get('/template/utilities-color', [RouteController::class, 'utilities_color'])->name('template.utilities.color');
+// Route::get('/template/utilities-other', [RouteController::class, 'utilities_other'])->name('template.utilities.other');
+// Route::get('/template/date', [RouteController::class, 'date'])->name('template.date');
 
 
 // admin Route
@@ -79,15 +81,16 @@ Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('tea
 Route::get('/teacher/setting', [TeacherController::class, 'setting'])->name('teacher.setting');
 Route::get('/teacher/presence', [TeacherController::class, 'presence'])->name('teacher.presence');
 Route::get('/teacher/add-presence', [TeacherController::class, 'add_presence'])->name('teacher.add.presence');
+Route::post('/teacher/store-presence', [TeacherController::class, 'store_presence'])->name('teacher.store.presence');
 Route::get('/teacher/grade', [TeacherController::class, 'grade'])->name('teacher.grade');
 Route::get('/teacher/add-grade', [TeacherController::class, 'add_grade'])->name('teacher.add.grade');
-Route::get('/teacher/store-grade', [TeacherController::class, 'store_grade'])->name('teacher.store.grade');
+Route::post('/teacher/store-grade', [TeacherController::class, 'store_grade'])->name('teacher.store.grade');
 Route::get('/teacher/edit-grade', [TeacherController::class, 'edit_grade'])->name('teacher.edit.grade');
 Route::get('/teacher/student', [TeacherController::class, 'student'])->name('teacher.student');
 Route::get('/teacher/student/detail/{id}', [TeacherController::class, 'detail_student'])->name('teacher.student.detail');
 
 // student Route
-Route::get('/', [StudentController::class, 'index'])->name('student');
+Route::get('/student', [StudentController::class, 'index'])->name('student');
 Route::get('/profile', [StudentController::class, 'profile'])->name('student.profile');
 Route::get('/setting', [StudentController::class, 'setting'])->name('student.setting');
 Route::get('/subject', [StudentController::class, 'subject'])->name('student.subject');
