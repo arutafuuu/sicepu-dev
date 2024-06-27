@@ -28,14 +28,14 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>NIS</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="student_id">
+                                    <input type="text" class="form-control" name="student_id" required>
                                 </td>
                             </tr>
                             <tr>
@@ -78,35 +78,35 @@
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="phone">
+                                    <input type="text" class="form-control" name="phone" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control" name="email">
+                                    <input type="email" class="form-control" name="email" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Nama Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="parent">
+                                    <input type="text" class="form-control" name="parent" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kontak Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="par_phone">
+                                    <input type="text" class="form-control" name="par_phone" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email Wali</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="email" class="form-control" name="par_email">
+                                    <input type="email" class="form-control" name="par_email" required>
                                 </td>
                             </tr>
                         </table>

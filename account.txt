@@ -1,8 +1,8 @@
-admin = wangeun@example.com, pass=superadmin
+admin :
+userid = 1, pass=''''''''
 
-teacher = budisantoso@example.com, pass=teacher
+teacher:
+userid = 197503211998031005, pass=''''''''
 
-student = aldifirmansyah@example.com, pass=student
-
-skema login adalah skema sementara, pengembangan fitur login rencananya menggunakan
-library laravel/ui yang masih dalam tahap percobaan.
+student:
+userid = 230001, pass=''''''''

@@ -27,14 +27,14 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>NIP</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="teacher_id">
+                                    <input type="text" class="form-control" name="teacher_id" required>
                                 </td>
                             </tr>
                             <tr>
@@ -61,7 +61,7 @@
                                 <td>Mata Pelajaran</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="subject">
+                                    <input type="text" class="form-control" name="subject" required>
                                 </td>
                             </tr>
                             {{-- <tr>
@@ -83,13 +83,13 @@
                             <td>Email</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="email">
+                                    <input type="text" class="form-control" name="email" required>
                                 </td>
                             <tr>
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="phone">
+                                    <input type="text" class="form-control" name="phone" required>
                                 </td>
                             </tr>
                         </table>

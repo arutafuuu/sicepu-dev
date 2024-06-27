@@ -28,7 +28,7 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="name" value="{{ $teacher->name }}">
+                                    <input type="text" class="form-control" name="name" value="{{ $teacher->name }}" required>
                                 </td>
                             </tr>
                             <tr>
@@ -36,7 +36,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="text" class="form-control" name="teacher_id"
-                                        value="{{ $teacher->teacher_id }}">
+                                        value="{{ $teacher->teacher_id }}" required>
                                 </td>
                             </tr>
                             <tr>
@@ -63,7 +63,7 @@
                                 <td>Mata Pelajaran</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="subject" value="{{ $teacher->subject }}">
+                                    <input type="text" class="form-control" name="subject" value="{{ $teacher->subject }}" required>
                                 </td>
                             </tr>
                             {{-- <tr>
@@ -86,14 +86,14 @@
                                 <td>Email</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="email" value="{{ $teacher->email }}">
+                                    <input type="text" class="form-control" name="email" value="{{ $teacher->email }}" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="phone" value="{{ $teacher->phone }}">
+                                    <input type="text" class="form-control" name="phone" value="{{ $teacher->phone }}" required>
                                 </td>
                             </tr>
                         </table>

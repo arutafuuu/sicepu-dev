@@ -27,7 +27,7 @@
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="{{ $student->name }}" name="name">
+                                    <input type="text" class="form-control" value="{{ $student->name }}" name="name" required>
                                 </td>
                             </tr>
                             <tr>
@@ -35,7 +35,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="text" class="form-control" value="{{ $student->student_id }}"
-                                        name="student_id">
+                                        name="student_id" required>
                                 </td>
                             </tr>
                             <tr>
@@ -81,7 +81,7 @@
                                 <td>Kontak</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="{{ $student->phone }}" name="phone">
+                                    <input type="text" class="form-control" value="{{ $student->phone }}" name="phone" required>
                                 </td>
                             </tr>
                             <tr>
@@ -89,7 +89,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="email" class="form-control" value="{{ $student->email }}"
-                                        name="email">
+                                        name="email" required>
                                 </td>
                             </tr>
                             <tr>
@@ -97,7 +97,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="text" class="form-control" value="{{ $student->parent_name }}"
-                                        name="parent_name">
+                                        name="parent_name" required>
                                 </td>
                             </tr>
                             <tr>
@@ -105,7 +105,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="text" class="form-control" value="{{ $student->parent_phone }}"
-                                        name="parent_phone">
+                                        name="parent_phone" required>
                                 </td>
                             </tr>
                             <tr>
@@ -113,7 +113,7 @@
                                 <td>:</td>
                                 <td>
                                     <input type="email" class="form-control" value="{{ $student->parent_email }}"
-                                        name="parent_email">
+                                        name="parent_email" required>
                                 </td>
                             </tr>
                         </table>

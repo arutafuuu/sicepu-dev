@@ -30,7 +30,7 @@
                                 <td>Mata Pelajaran</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="{{ $subject->name }}" name="name">
+                                    <input type="text" class="form-control" value="{{ $subject->name }}" name="name" required>
                                 </td>
                             </tr>
                         </table>

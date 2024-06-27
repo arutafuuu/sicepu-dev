@@ -22,14 +22,14 @@
                                 <td>Id Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="class_id">
+                                    <input type="text" class="form-control" name="class_id" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="name" required>
                                 </td>
                             </tr>
                             <tr>

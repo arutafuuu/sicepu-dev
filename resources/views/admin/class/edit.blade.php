@@ -24,14 +24,14 @@
                                 <td>:</td>
                                 <td>
                                     <input type="text" class="form-control" value="{{ $class->class_id }}"
-                                        name="class_id">
+                                        name="class_id" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Kelas</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" class="form-control" value="{{ $class->name }}" name="name">
+                                    <input type="text" class="form-control" value="{{ $class->name }}" name="name" required>
                                 </td>
                             </tr>
                             <tr>
